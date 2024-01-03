@@ -28,20 +28,20 @@
         }
     }
 
-    // Get user input
+    
     var num1 = parseFloat(prompt('Enter the first number:'));
     var op = prompt('Enter the operation (+, -, *, /, %):');
     var num2 = parseFloat(prompt('Enter the second number:'));
 
-    // Check if inputs are valid numbers
+    
     if (!isNaN(num1) && !isNaN(num2)) {
-        // Perform the calculation
+        
         var result = cal(num1, op.toLowerCase(), num2);
 
-        // Display the result
+        
         alert('Result: ' + result);
     } else {
-        // Display an error message for invalid input
+     
         alert('Invalid input. Please enter valid numbers.');
     } 
     </script>
