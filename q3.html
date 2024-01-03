@@ -10,7 +10,36 @@
     <h1></h1>
 
     <script>
-        
+     var nums = prompt("Enter the number of values:");
+
+// Convert the user input to an integer
+nums = parseInt(nums);
+
+// Check if the input is a valid number
+if (!isNaN(nums) && nums > 0) {
+    // Initialize an array to store the entered values
+    var values = [];
+
+    // Loop to get user input for each value
+    for (var i = 0; i < nums; i++) {
+        var num = prompt("Enter value " + (i + 1) + ":");
+        // Convert the input value to a number and add it to the array
+        values.push(parseFloat(num));
+    }
+
+    // Calculate the sum of the entered values
+    var sum = values.reduce(function (total, value) {
+        return total + value;
+    }, 0);
+
+    // Calculate the average
+    var average = sum / nums;
+
+    // Display the sum and average
+    alert("Sum: " + sum + "\nAverage: " + average.toFixed(2));
+} else {
+    alert("Invalid input");
+}   
         
     </script>
 </body>
