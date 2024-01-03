@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <h1></h1>
+
+    <script>
+        
+        function cal(num1, op, num2) {
+        switch (op) {
+            case '+':
+                return num1 + num2;
+            case '-':
+                return num1 - num2;
+            case '*':
+                return num1 * num2;
+            case '/':
+                return num1 / num2;
+            case '%':
+                return num1 % num2;
+            default:
+                return 'Invalid operation';
+        }
+    }
+
+    // Get user input
+    var num1 = parseFloat(prompt('Enter the first number:'));
+    var op = prompt('Enter the operation (+, -, *, /, %):');
+    var num2 = parseFloat(prompt('Enter the second number:'));
+
+    // Check if inputs are valid numbers
+    if (!isNaN(num1) && !isNaN(num2)) {
+        // Perform the calculation
+        var result = cal(num1, op.toLowerCase(), num2);
+
+        // Display the result
+        alert('Result: ' + result);
+    } else {
+        // Display an error message for invalid input
+        alert('Invalid input. Please enter valid numbers.');
+    } 
+    </script>
+</body>
+</html>
