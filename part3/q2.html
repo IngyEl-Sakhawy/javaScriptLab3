@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <h1>Arrays Predefined Methods</h1>
+
+    <script>
+        
+let numbers = [5, 2, 8, 1, 7, 3, 9, 4, 6];
+
+
+console.log(numbers.length);           // length: Returns the length of the array
+console.log(numbers.sort());           // sort: Sorts the elements of an array
+console.log(numbers.reverse());        // reverse: Reverses the elements of an array
+console.log(numbers.indexOf(4));       // indexOf: Returns the index of the first occurrence of a value
+console.log(numbers.includes(7));      // includes: Checks if an array includes a certain value
+console.log(numbers.slice(1, 5));      // slice: Returns a shallow copy of a portion of an array
+console.log(numbers.concat([10, 11])); // concat: Concatenates arrays
+console.log(numbers.map(x => x * 2));  // map: Creates a new array with the results of calling a function on each element
+console.log(numbers.filter(x => x > 5)); // filter: Creates a new array with elements that pass a test
+console.log(numbers.reduce((acc, curr) => acc + curr, 0));  // reduce: Reduces the array to a single value
+
+    </script>
+</body>
+</html>

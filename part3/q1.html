@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <h1>Objects Predefined Methods</h1>
+
+    <script>
+    // Example Object
+let person = {
+  firstName: "ingy",
+  lastName: "elsakhawy",
+  age: 23,
+
+  sayHello: function() {
+    console.log(`Hello, I'm ${this.firstName} ${this.lastName}`);
+  }
+
+};
+
+
+console.log(Object.keys(person));      // Object.keys: Returns an array of object keys
+console.log(Object.values(person));    // Object.values: Returns an array of object values
+console.log(Object.entries(person));   // Object.entries: Returns an array of [key, value] pairs
+console.log(person.hasOwnProperty('age'));  // hasOwnProperty: Checks if an object has a specific property
+console.log(person);                   // Logging the modified object
+console.log(Object.freeze(person));    // Object.freeze: Freezes an object, preventing modifications
+console.log(Object.isFrozen(person));  // Object.isFrozen: Checks if an object is frozen
+console.log(Object.assign(person, { gender: "Male" }));  // Object.assign: Copies properties from one or more objects to a target object
+person.sayHello();                     // Calling a method inside the object
+delete person.age;                     // delete: Deletes a property from an object
+
+    </script>
+</body>
+</html>

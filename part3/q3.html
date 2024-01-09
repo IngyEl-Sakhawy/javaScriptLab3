@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <h1>Nested Function and Closure</h1>
+
+    <script>
+    function firstFunction(outer) {
+  let outerVar = "I'm from outer function";
+
+  function secondFunction(inner) {
+    let innerVar = "I'm from inner function";
+    console.log(`first : ${outer}`);
+    console.log(`second : ${inner}`);
+    console.log(outerVar);
+    console.log(innerVar);
+  }
+
+  return secondFunction;
+}
+
+let closureFunction = firstFunction("Hello, Lexical Closure!");
+closureFunction("second");
+
+
+    </script>
+</body>
+</html>
